@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>[CIS255 HW2] Peter Piwowarski</title>
+	<style>
+		.centerblock
+		{
+			display: block;
+			width: 400px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 20px;
+		}
+		.padded
+		{
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+<header>
+	<h1>Peter Piwowarski</h1>
+</header>
+
+<form action="https://github.com/pjpiwowa/cis255/">
+	<input type="submit" value="See this page's source code on GitHub" />
+</form>
+
+<article>
+	<header>
+		<h2>My Favorite (and anti-favorite) HTML Tags</h2>
+	</header>
+
+	<hr />
+
+	<section>
+		<figure class="centerblock">
+		<video width="320" class="padded" controls>
+			<source src="BigBuckBunny_320x180.mp4" />
+			Your browser does not support embedded video, but you
+			can still download <cite>Big Buck Bunny</cite></a> here.
+		</video>
+		<figcaption><a href="http://www.bigbuckbunny.org/"><cite>
+		Big Buck Bunny</cite></a> is an open-content cartoon from the
+		<a href="http://www.blender.org/">Blender Foundation.</a>
+		</figure>
+
+		<p>Even though I don't really go for rich-media sorts of things
+		(I like the idea of the web as a way to deliver
+		semantically-marked-up running text much more than as a way to
+		deliver cat pictures and cartoons), I like the way the
+		&lt;video&gt; tag works in HTML5, because it serves as a good
+		example of how a rich-media page can gracefully degrade to
+		running text if necessary. The following code should render
+		something useful and meaningful under practically any
+		circumstance, from modern ten-ton web browsers to something like
+		<a href="http://lynx.invisible-island.net/">lynx</a>:</p>
+
+<pre><code>
+&lt;video controls&gt;
+	&lt;source src="BigBuckBunny_320x180.mp4" /&gt;
+	&lt;a href="BigBuckBunny_320x180.mp4"&gt;Your browser does not support
+	embedded video, but you can still download &lt;cite&gt;Big Buck Bunny
+	&lt;/cite&gt;&lt;/a&gt; here.
+&lt;/video&gt;</code></pre>
+
+		<p>At the absolute worst, it only needs an additional two or
+		three (dozen) additional &lt;source&gt; elements to accomodate
+		web browsers that support different video codecs. (This is
+		almost identical to the code used for the video above.)</p>
+	</section>
+
+	<hr />
+
+	<section>
+		<p>Sometimes, exact formatting matters. Markup languages such as
+		HTML very commonly use some sort of rule to "normalize"
+		whitespace. In the source for this document, for example, there
+		is extra whitespace for indentation, to make the structure of
+		the document more obvious to humans reading the source. You
+		don't see this in your browser, because all any amount of
+		whitespace does is separate one word from another, according to
+		the semantics of HTML. This is a very good thing in general,
+		but there needs to be some way of escaping from constraints
+		like this. If, for example, I want to show you a C function:</p>
+
+<pre><code>
+char *strcpy(char *dst, char *src)
+{
+	while (*src != '\0')
+	{
+		*(dst++) = *(src++);
+	}
+	return dst;
+}</code></pre>
+
+		<p>it is very important that all whitespace be preserved
+		exactly, or some of the intended meaning will be lost. (This
+		would be even more important for a language like Python, where
+		the rules of HTML would actually break the code, not just make
+		it harder to read!) I think <strong>&lt;pre&gt;</strong> is a
+		very important tag for this reason: it is the escape route.</p>
+	</section>
+
+	<hr />
+
+	<section>
+		<p>Finally, I would like to talk about one anti-favorite tag
+		(and a "class" of favorite tags):
+		<strong style="color: #D00000">&lt;div&gt; </strong>. Far, far
+		too many websites still seem to use &lt;div&gt; in preference to
+		new HTML5 tags like <strong> &lt;article&gt;</strong> or 
+		<strong>&lt;aside&gt;</strong> for general-purpose divisions on
+		pages. This (reliably) communicates semantic information about
+		the divisions to absolutely nobody and nothing except that one
+		page's stylesheets, because they happen to know the class names
+		it happens to use. The new semantic tags are, by contrast, very
+		interesting to me, because they bring the concept of semantic
+		markup, which can be rendered in any manner the viewer wishes, 
+		not necessarily just the way the designer intends, much closer
+		to reality.
+		
+		<p>Consider as an example Firefox's 
+		<a href="https://blog.mozilla.org/firefox/reader-view/">
+		Reader View</a> feature, which uses semantic tags (among other
+		methods - it has to have something to fall back on) to dig the
+		actual content out of a webpage for easier reading. I think it
+		should be possible to go much farther than this does, of course,
+		but it demonstrates some of the exciting possibilities of true
+		semantic markup, in a world beyond &lt;div&gt;.</p>
+	</section>
+
+	<hr />
+</article>
+<h2>Tableish Course Lookup</h2>
+<form action='https://csis.svsu.edu/~gpcorser/php/courses.php'>
+	<table><tbody>
+		<tr>
+			<td>Course Prefix (Department)</td>
+			<td><input type='text' name='prefix' /></td>
+		</tr>
+
+		<tr>
+			<td>Course Number</td>
+			<td><input type='text' name='courseNumber'></td>
+		</tr>
+
+		<tr>
+			<td>Instructor</td>
+			<td><input type='text' name='instructor'></td>
+		</tr>
+
+		<tr>
+			<td colspan=2><input type='submit' value='Submit'></td>
+		</tr>
+	</tbody></table>
+</form>
+
+</body>
+
+</html>
