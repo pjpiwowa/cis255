@@ -17,6 +17,10 @@
 		{
 			padding: 20px;
 		}
+		.evil
+		{
+			color: #D00000;
+		}
 	</style>
 </head>
 
@@ -54,10 +58,10 @@
 		(I like the idea of the web as a way to deliver
 		semantically-marked-up running text much more than as a way to
 		deliver cat pictures and cartoons), I like the way the
-		&lt;video&gt; tag works in HTML5, because it serves as a good
-		example of how a rich-media page can gracefully degrade to
-		running text if necessary. The following code should render
-		something useful and meaningful under practically any
+		<strong>&lt;video&gt;</strong> tag works in HTML5, because it
+		serves as a good example of how a rich-media page can gracefully
+		degrade to running text if necessary. The following code should
+		render something useful and meaningful under practically any
 		circumstance, from modern ten-ton web browsers to something like
 		<a href="http://lynx.invisible-island.net/">lynx</a>:</p>
 
@@ -70,9 +74,10 @@
 &lt;/video&gt;</code></pre>
 
 		<p>At the absolute worst, it only needs an additional two or
-		three (dozen) additional &lt;source&gt; elements to accomodate
-		web browsers that support different video codecs. (This is
-		almost identical to the code used for the video above.)</p>
+		three (dozen) <strong>&lt;source&gt;</strong> elements to
+		accomodate web browsers that support different video codecs.
+		(This is almost identical to the code used for the video
+		above.)</p>
 	</section>
 
 	<hr />
@@ -112,27 +117,29 @@ char *strcpy(char *dst, char *src)
 	<section>
 		<p>Finally, I would like to talk about one anti-favorite tag
 		(and a "class" of favorite tags):
-		<strong style="color: #D00000">&lt;div&gt; </strong>. Far, far
-		too many websites still seem to use &lt;div&gt; in preference to
-		new HTML5 tags like <strong> &lt;article&gt;</strong> or 
+		<strong class="evil">&lt;div&gt;</strong>. Far, far too many
+		websites still seem to use
+		<strong class="evil">&lt;div&gt;</strong> in preference to new
+		HTML5 tags like <strong>&lt;article&gt;</strong> or
 		<strong>&lt;aside&gt;</strong> for general-purpose divisions on
 		pages. This (reliably) communicates semantic information about
 		the divisions to absolutely nobody and nothing except that one
-		page's stylesheets, because they happen to know the class names
-		it happens to use. The new semantic tags are, by contrast, very
-		interesting to me, because they bring the concept of semantic
-		markup, which can be rendered in any manner the viewer wishes, 
-		not necessarily just the way the designer intends, much closer
-		to reality.
+		page's stylesheets and/or scripts, because they happen to know
+		the class names it happens to use. The new semantic tags are, by
+		contrast, very interesting to me, because they bring the concept
+		of semantic markup, which can be rendered in any manner the
+		viewer wishes, not necessarily just the way the designer
+		intends, much closer to reality.
 		
 		<p>Consider as an example Firefox's 
 		<a href="https://blog.mozilla.org/firefox/reader-view/">
 		Reader View</a> feature, which uses semantic tags (among other
 		methods - it has to have something to fall back on) to dig the
-		actual content out of a webpage for easier reading. I think it
-		should be possible to go much farther than this does, of course,
-		but it demonstrates some of the exciting possibilities of true
-		semantic markup, in a world beyond &lt;div&gt;.</p>
+		actual content out of a webpage, and then renders it in a simple
+		running-text format for easier reading. I think it should be
+		possible to go much farther than this does, of course, but it
+		demonstrates some of the exciting possibilities of true semantic
+		markup, in a world beyond &lt;div&gt;.</p>
 	</section>
 
 	<hr />
