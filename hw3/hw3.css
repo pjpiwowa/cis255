@@ -1,0 +1,85 @@
+body
+{
+	width: 90%;
+	margin: auto;
+
+	/* I despise sans-serif fonts. Still, this is usually the default. */
+	font-family: serif;
+}
+
+article
+{
+	border: 1px dotted #888;
+	border-radius: 4px;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	padding: 0.25em;
+}
+
+h1
+{
+	border-bottom: 1px solid black;
+}
+
+a
+{
+	outline: 1px dotted #8CF;
+}
+
+a:visited
+{
+	outline-color: #D8D;
+}
+
+figcaption
+{
+	font-size: 8pt;
+}
+
+/* Disable columns on small-medium size screens. */
+@media screen and (max-width: 1024px)
+{
+	.threecol { column-count: 1; }
+}
+
+@media (min-width: 1024px)
+{
+	.threecol
+	{
+		column-count: 3;
+		column-width: 33%;
+		column-rule-width: 3%;
+		column-rule-style: dotted;
+		text-align: justify;
+	}
+}
+
+.hoverfade
+{
+	transition: opacity 1s;
+	opacity: 0.33;
+}
+
+.hoverfade:hover
+{
+	opacity: 1;
+}
+
+.spancols
+{
+	column-span: all;
+}
+
+.float-right
+{
+	float: right;
+	border: 1px solid gray;
+	padding: 1px;
+	margin: 0.5em;
+}
+
+#github
+{
+	max-width: 20%;
+	margin: auto;
+}

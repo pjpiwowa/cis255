@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+	CSS property collection:
+	(*  indicates a property discussed at length in the document,
+	 [] indicates "subproperties" of some shorthand property also used)
+
+	  width
+	  margin [margin-top] [margin-bottom]
+	  padding
+	  border [border-bottom]
+	* outline [outline-color]
+	  column-count
+	  column-width
+	* column-rule-width
+	* column-rule-style
+	* column-span
+	  text-align
+	* transition
+	  opacity
+	* font-family
+	  font-size
+	  float
+-->
+
+<head>
+	<meta charset="utf-8" />
+	<title>[CIS255 HW3] Peter Piwowarski</title>
+
+	<link rel="stylesheet" href="hw3.css" />
+</head>
+
+<body>
+
+<header>
+	<form id="github" action="https://github.com/pjpiwowa/cis255/tree/master/hw3">
+		<input type="submit" value="See this page's source code on GitHub" />
+	</form>
+
+	<h1>A CSS Demonstration</h1>
+</header>
+<article id="properties" class="threecol">
+	<h2 class="spancols">Helpful and Harmful CSS Features</h2>
+
+	<section id="column-span">
+		<p>This article is contained within an HTML
+		&lt;article&gt; element, which has CSS styling applied to it to
+		enable the three-column layout. This is what makes semantic 
+		sense to me; after all, it's the article that is divided into
+		columns, not some division inside it. This leads to a bit of a
+		semantic problem, however: I want the article title above to
+		span across all three columns, but it also belongs inside the
+		article (it is, after all, the article's header). The 
+		(apparently relatively new) <strong>column-span</strong> CSS
+		property provides the solution, allowing any element to be
+		specified as spanning across all columns. (Unfortunately Firefox
+		does not support it yet.)</p>
+	</section>
+
+	<hr />
+
+	<section id="outline">
+		<p>Interestingly, CSS has two different kinds of border. The
+		<strong>outline</strong> property (a shorthand property similar
+		to <strong>border</strong>) creates an outline around its
+		element, outside the border box. I'm not quite sure whether it's
+		really genuinely helpful, but this page uses them in an attempt
+		to make links "stand out" better.</p>
+	</section>
+
+	<hr />
+
+	<section id="colrules">
+		<p>I normally don't like multi-column layouts very much. I'm not
+		sure whether it's a common reaction, but I simply find them
+		harder to read; it seems to take a little extra mental
+		processing to "follow" the columns. Fortunately, CSS has
+		(something of) an answer: the <strong>column-rule</strong>
+		family of properties (used on this page) allow lines of various
+		types to be placed between the columns, making the separation
+		much more visually clear.		
+	</section>
+
+	<hr />
+
+	<section id="transitions" class="hoverfade">
+		<p>CSS' <strong>transition</strong> support is somewhat
+		interesting to me, in that it permits some very simple
+		animations without relying on any client-side scripting, in a
+		way that fits in with other CSS features such as the
+		<strong>:hover</strong> pseudo-selector very well. As a result,
+		it's extremely easy to make "glitzy" animations that are very
+		likely to render correctly, even if the user (<a
+		href="https://noscript.net/faq#qa1_10">wisely</a>) disables
+		Javascript for untrusted, possibly-evil websites like this one.
+		<strong>Hover over this section for a very silly demonstration
+		of CSS transitions!</strong></p></p>
+	</section>
+
+	<hr />
+
+	<section id="downloadable-fonts">
+		<p>While not strictly a property, the <strong>@font-face
+		</strong> pseudo-selector allows <em>defining</em> a new value
+		for the <strong>font-family</strong> property. Specifically, it
+		allows the document author to specify that a new font be
+		downloaded for use in rendering the page. This superficially
+		sounds like a good idea; no more are designers constrained by
+		whatever fonts the user happens to have available.</p>
+
+		<figure class="float-right" id="sylvester"
+		style="max-width: 132px;">
+			<img src="sylvester-birdfeeder-tiny.JPG"/>
+			<figcaption>
+				Downloadable fonts help Sylvester get to the
+				bird feeder. You don't want that, do you?
+			</figcaption>
+		</figure>
+
+		<p>Unfortunately this overlooks a serious problem: font parsers
+		are <em>extremely</em> complex, and were generally not
+		originally designed with untrusted input in mind. This means
+		that the introduction of this feature created a whole new class
+		of security vulnerabilites, especially serious on Microsoft
+		Windows systems where security flaws in the font parser have
+		often resulted in arbitrary code execution
+		<a href="https://threatpost.com/of-truetype-font-vulnerabilities-and-the-windows-kernel/101263/">
+		<em>in the kernel</em></a>, because Windows parses fonts in
+		kernel space for "performance" reasons. (The feature has also
+		been blatantly misused; for instance, use of custom downloadable
+		"fonts" to render icons has caused accessiblity issues and
+		<a class="selfsigned" href="https://www.tedunangst.com/flak/post/i-hate-icon-fonts">
+		other</a>
+		<a href="https://blog.github.com/2016-02-22-delivering-octicons-with-svg/">
+		problems</a>.)</p>
+	</section>
+</article>
+
+<img src="purple-h1.png" class="float-right" />
+
+<p>Observe that we have here an image of Chrome DevTools being used for silly purposes.</p>
+
+</body>
+
+</html>
