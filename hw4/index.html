@@ -13,17 +13,22 @@
 
 <!--
 Bootstrap classes used:
-	Grid: container, row, col-sm
+	Grid: container, row, col-md, col-lg, col-lg-4
 	Typography: display-4, lead
 	Cards: card, card-body, card-img-top, card-title, card-text
-	Spacing: m-1, m-2, m-3, mb-4
-	Utility.Color: bg-light
-	Utility.Sizing: w-100
+	Spacing: m-*
+	Utility.Color: bg-light, bg-primary, text-white
+	Utility.Sizing: w-100, w-25
+	Utility.Border: border, rounded
+	Utility.Text: text-center
 	Images: img-fluid
 -->
 
 <body>
 
+<nav class="bg-primary border rounded container w-100 text-center">
+	<a class="text-white" href="https://github.com/pjpiwowa/cis255/tree/master/hw4">See this page's source code on GitHub</a>
+</nav>
 <img class="img-fluid w-100" alt="[Image: The Heritage Tire storefront]" src="STORE3_op_780x511.jpg" />
 
 <header class="container m-2">
@@ -89,7 +94,7 @@ Bootstrap classes used:
 		     double your money back for this map, so we simply don't use
 		     any of it.
 		-->
-		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1454.5665735593363!2d-84.122022!3d43.185717!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca71873a75a31eef!2sHeritage+Tire+Services+Center!5e0!3m2!1sen!2sus!4v1528496152302" width="600" height="450" frameborder="0" style="border:0" allowfullscreen id="map" class="col-sm"></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1454.5665735593363!2d-84.122022!3d43.185717!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca71873a75a31eef!2sHeritage+Tire+Services+Center!5e0!3m2!1sen!2sus!4v1528496152302" width="600" height="450" frameborder="0" style="border:0" allowfullscreen id="map" class="col-lg"></iframe>
 	</div>
 </article>
 
@@ -97,7 +102,9 @@ Bootstrap classes used:
 	<h2>Image and other credits</h2>
 	<p>All images are taken (with some mild manipulation) from the <a href="http://www.heritagetireservice.com/">real Heritage Tire website</a>, except for the chainsaw image, taken from the <a href="https://heritagetireservicecenterllc.stihldealer.net/products/chain-saws/homeowner-saws/ms170/">Heritage Tire Stihl dealer site</a>.</p>
 
-	<a>Some text content (principally the introductory paragraph) is also taken from the real Heritage Tire website.</a>
+	<p>Some text content (principally the introductory paragraph) is also taken from the real Heritage Tire website.</p>
+
+	<p>See <a href="explanations.html">here</a> for more information about how this site was built.</p>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>On Bootstrap</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
+	<link rel="stylesheet" href="hw4.css" />
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+</head>
+
+<body>
+
+<article class="container">
+<h1 class="mt-4 mb-4">On Bootstrap</h1>
+
+<p>This site was built with <a href="http://getbootstrap.com">the Bootstrap framework</a>, which provides lots (and lots) of CSS and JavaScript fluff to build "modern" responsive webpages fairly easily. Compared to the WordPress version of the website, this site was actually far, far <em>easier</em> to build. Direct, total control of the markup goes a long, long way, as does the ability to override undesired CSS attribute settings as needed. (Even as it stands, I resorted to WordPress' "raw" HTML editor for that version of this site.) Some things (such as producing a general layout and style that I considered appropriate) were merely easier, but others (such as the slightly off-white background) were simply not feasible in WordPress, at least not without loads of effort, on the level of building a whole new WordPress theme. At least part of the trouble stems from the simple fact that WordPress is still really a blog platform; it's really, really not meant to do things like this site, even though that is done so frequently.</p>
+
+<p>The only problem I can see really is that an absolutely non-technical user would be intimidated by working with raw HTML. As difficult as it is to get WSIWYG site-builders to behave (and as easy as it is to pick up enough basic HTML to cobble together a page like this), apparently many people would rather fight with the site-builder. I'm not sure I can say "and that's okay" with a straight face, but it's certainly The Way Things Are.</p>
+
+<p>Most of Bootstrap's functionality is attached to individual HTML elements by specifying one or (many...) more of a number of pre-defined classes. This site's main page uses the following (not an exhaustive list):</p>
+
+<ul>
+	<li><strong>container</strong>: The basis of the layout grid; all content goes in a container.</li>
+	<li><strong>row</strong>: Placed inside containers to denote a section with more than one column.</li>
+	<li><strong>col-*</strong>: A whole family of classes that denote a single column. The * represents one of the five "breakpoints", specifically the largest viewport size at which the layout will still render with columns side-by-side. col-md, for example, will render side-by-side only at sizes larger than "medium" (768 pixels wide).</li>
+	<li><strong>display-4</strong>: One of a family of "display heading" styles, larger than the normal heading styles.</li>
+	<li><strong>lead</strong>: Applied to the leading header paragraph, making it stand out more.</li>
+	<li><strong>card, card-*</strong>: Cards are a form of content block with nicely pre-defined border and header image styles, among other things. The main page uses cards for the three "services" subsections.</li>
+	<li><strong>m-*</strong>: A family of utility classes to add margins; the * is replaced with a small integer (the largest this site uses is, as I recall, m-4).</li>
+	<li><strong>bg-*</strong>: A family of utility classes to set an element's background colors; the * is replaced with names like "primary", "secondary", "light", or "dark". This site uses only bg-primary and bg-light (and overrides the color of bg-light).</li>
+	<li><strong>text-white</strong>: One of a family of utility classes to set an element's foreground/text color.</li>
+	<li><strong>w-*</strong>: A family of utility classes to set an element's width, in increments of 25%.</li>
+	<li><strong>border</strong>: Specifies that an element should have a border.</li>
+	<li><strong>rounded</strong>: Specifies that an element should have rounded corners.</li>
+	<li><strong>text-center</strong>: One of a family of styles to specify the text alignment in a block element.</li>
+	<li><strong>img-fluid</strong>: The primary "responsive image" class, which ensures that an image is never larger than the screen, among other things; applied to the main header image, along with w-100, to simply specify that it fills the entire width of the screen.</li>
+</ul>
+
+</body>
+
+</html>
