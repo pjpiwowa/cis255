@@ -11,9 +11,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 </head>
 
+<!--
+Bootstrap classes used:
+	Grid: container, row, col-sm
+	Typography: display-4, lead
+	Cards: card, card-body, card-img-top, card-title, card-text
+	Spacing: m-1, m-2, m-3, mb-4
+	Utility.Color: bg-light
+	Utility.Sizing: w-100
+	Images: img-fluid
+-->
+
 <body>
 
-<header class="container">
+<img class="img-fluid w-100" alt="[Image: The Heritage Tire storefront]" src="STORE3_op_780x511.jpg" />
+
+<header class="container m-2">
 	<h1 class="display-4">Heritage Tire and Service Center</h1>
 	<address>709 W. Broad Street, Chesaning, MI 48616</address>
 
@@ -21,34 +34,68 @@
 </header>
 
 <article class="container">
-	<h2>Services</h2>
-	<div class="row">
-		<section class="col-sm" id="tires">
-		<h3>￼Tire Sales, Mounting and Balancing</h3>
-		<p>We provide sales and service for all kinds of tires, including automotive, truck, lawn, ATV, and farm equipment tires.</p>
+	<h2 class="m-3">Services</h2>
+	<div class="row m-2 mb-4">
+		<section class="col-md card m-1 bg-light" id="tires">
+			<img class="card-img-top" alt="[Image: A tractor tire, and a tractor]" src="tirefarm.jpg"/>
+			<div class="card-body">
+				<h3 class="card-title">￼Tire Sales, Mounting and Balancing</h3>
+				<p class="card-text">We provide sales and service for all kinds of tires, including automotive, truck, lawn, ATV, and farm equipment tires.</p>
+			</div>
 		</section>
 
-		<section class="col-sm" id="shop">
-		<h3>￼Automotive Repair And Service</h3>
-		<p>We provide general auto repair services, including oil changes, brake service, wheel alignments, and steering and suspension service.</p>
+		<section class="col-md card m-1 bg-light" id="shop">
+			<img class="card-img-top" alt="[Image: A car on a hoist]" src="garage1.jpg" />
+			<div class="card-body">
+				<h3 class="card-title">￼Automotive Repair And Service</h3>
+				<p class="card-text">We provide general auto repair services, including oil changes, brake service, wheel alignments, and steering and suspension service.</p>
+			</div>
 		</section>
 
-		<section class="col-sm" id="stihl">
-		<h3>Stihl Power Equipment</h3>
-		<p>We are a proud Stihl dealer, providing sales and service for Stihl chainsaws, leaf blowers, string trimmers, and more. You can find more information about the Stihl products we offer at our dealer page, and at Stihl USA’s YouTube channel.</p>
+		<section class="col-md card m-1 bg-light" id="stihl">
+			<img class="card-img-top" alt="[Image: a Stihl chainsaw]" src="ms170.png" />
+			<div class="card-body">
+				<h3 class="card-title">Stihl Power Equipment</h3>
+				<p class="card-text">We are a proud Stihl dealer, providing sales and service for Stihl chainsaws, leaf blowers, string trimmers, and more. You can find more information about the Stihl products we offer at our dealer page, and at Stihl USA’s YouTube channel.</p>
+			</div>
 		</section>
 	</div>
 
-	<h2>Finding Us</h2>
-	<div class="row">
-		<p class="col-sm">We are located on the south side of Broad Street (M-57) at the corner with Wood Street, just west of downtown Chesaning.</p>
+	<div class="row m-2 mb-4">
+		<aside class="col-lg-4">
+			<h2>Contact Us</h2>
+			<address>
+				709 W. Broad Street <br />
+				Chesaning, MI 48616 <br />
+				Phone: 989-845-3040 <br />
+				Fax: 989-845-3047   <br />
+			</address>
+			<address>
+				After-hours farm service: <br />
+				989-274-1580 <br />
+			</address>
+			<address>
+				Garage hours:                           <br />
+				Monday &mdash; Friday: 8:00AM to 5:00PM <br />
+				Saturday: 8:00AM to 1:00PM              <br />
+			</address>
+			<h3>Finding Us</h3>
+			<p>We are located on the south side of Broad Street (M-57) at the corner with Wood Street, just west of downtown Chesaning.</p>
+		</aside>
+
+		<!-- Bootstrap provides much "responsive" slop for embedded
+		     content. This appears mainly intended to preserve the
+		     frame's aspect ratio; this is 200% guaranteed irrelevant or
+		     double your money back for this map, so we simply don't use
+		     any of it.
+		-->
 		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1454.5665735593363!2d-84.122022!3d43.185717!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca71873a75a31eef!2sHeritage+Tire+Services+Center!5e0!3m2!1sen!2sus!4v1528496152302" width="600" height="450" frameborder="0" style="border:0" allowfullscreen id="map" class="col-sm"></iframe>
 	</div>
 </article>
 
-<footer class="container">
+<footer class="container mb-4">
 	<h2>Image and other credits</h2>
-	<p>All images are taken from the <a href="http://www.heritagetireservice.com/">real Heritage Tire website</a>, except for the chainsaw image, taken from the <a href="https://heritagetireservicecenterllc.stihldealer.net/products/chain-saws/homeowner-saws/ms170/">Heritage Tire Stihl dealer site</a>.</p>
+	<p>All images are taken (with some mild manipulation) from the <a href="http://www.heritagetireservice.com/">real Heritage Tire website</a>, except for the chainsaw image, taken from the <a href="https://heritagetireservicecenterllc.stihldealer.net/products/chain-saws/homeowner-saws/ms170/">Heritage Tire Stihl dealer site</a>.</p>
 
 	<a>Some text content (principally the introductory paragraph) is also taken from the real Heritage Tire website.</a>
 </footer>

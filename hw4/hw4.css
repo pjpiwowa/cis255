@@ -1,10 +1,18 @@
+/*
+ * Overrides for some bootstrap defaults I consider more or less evil.
+ */
+
 body
 {
 	/* I *despise* sans-serif fonts. */
 	font-family: serif;
+
+	/* A nice cream-paper color. */
+	background-color: #fef8f0 !important;
 }
 
-.container
+.bg-light
 {
-	margin-bottom: 1em;
+	/* A darker cream-paper color. */
+	background-color: #fef5ea !important;
 }
